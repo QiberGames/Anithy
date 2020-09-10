@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "anithy-app"
+    }
+  },
+  "defaultProject": "anithy-app",
+  "cli": {
+    "analytics": "6242214f-8450-4ab0-a768-f183883c2c76"
+  }
 }

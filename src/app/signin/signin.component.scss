@@ -1,0 +1,80 @@
+@import "../../ui/variables";
+
+// Sign-in style
+.page{
+    background: url("../../assets/wave.png") top -5vh left -5vw no-repeat, url("../../assets/wave-down.png") bottom -5vw right -5vw no-repeat;
+    background-size: 50vw;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    margin-top: -100px;
+    & .logo-card{
+        margin-bottom: 1vh;
+        & .logo{
+            width: 15rem;
+        }
+    }
+
+    & .login-card{
+        border-radius: 10px;
+        border: 3px solid $tangerine;
+        min-width: 80vw;
+        padding: 2vw;
+        min-height: 25vh;
+
+        & .input-form{
+            position: relative;
+            margin: 25px;
+
+            & label{ 
+                position: absolute;
+                left: 50%;
+                top: -15px;
+                transform: translateX(-50%);
+                font-size: 11pt;
+                background: #333;
+                padding: 3px;
+
+                
+            }
+            & input{
+                background: $rblackl;
+                color: #fff;
+                padding: 10px;
+                border: 2px solid #333;
+
+                &:hover, &:focus{
+                    border: 2px solid $tangerine;
+
+                    & + label{
+                        background: $tangerine;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (min-width: 600px){
+    .content{
+        & .login-card{
+            min-width: 25vw;
+            max-width: 25vw;
+        }
+    }
+}
