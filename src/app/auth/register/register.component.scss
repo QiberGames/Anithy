@@ -1,8 +1,8 @@
-@import "../../ui/variables";
+@import "../../../ui/variables";
 
 // Sign-in style
 .page {
-  background: url("../../assets/wave.png") top -5vh left -5vw no-repeat, url("../../assets/wave-down.png") bottom -5vw right -5vw no-repeat;
+  background: url("../../../assets/wave.png") top -5vh left -5vw no-repeat, url("../../../assets/wave-down.png") bottom -5vw right -5vw no-repeat;
   background-size: 50vw;
   min-height: 100vh;
 }
@@ -12,46 +12,21 @@
   padding-bottom: 2rem;
 }
 
-.login-card {
+.register-card {
   border-radius: 10px;
   border: 3px solid $tangerine;
   padding: 2vw;
   background-color: #2A2A34;
 
-  & .login-lable {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    span {
+  & .register-lable {
+    p {
       text-align: center;
       color: gray;
       margin: 0;
-
-      &::before,
-      &::after {
-        content: ' ';
-        position: absolute;
-        width: 35%;
-        height: 5px;
-        background-color: gray;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 2px;
-      }
-
-      &::before {
-        left: 30px;
-      }
-
-      &::after {
-        right: 30px;
-      }
     }
   }
 
-  & .login-types {
+  & .register-types {
     margin: 10px;
     text-align: center;
     justify-content: center;
@@ -66,7 +41,6 @@
       cursor: pointer;
       margin: 0 5px;
       transition: all .4s;
-
       &:hover {
         color: gray;
       }
@@ -143,7 +117,7 @@
     }
   }
 
-  & .loginBtnForm {
+  & .registerBtnForm {
     margin-bottom: 15px;
   }
 
@@ -152,7 +126,7 @@
     color: gray;
   }
 
-  & .loginBtn {
+  & .registerBtn {
     display: block;
     width: 100%;
     margin: auto;
@@ -171,40 +145,4 @@
       background: $ochre;
     }
   }
-}
-
-.to-social-login {
-  display: block;
-  width: 100%;
-  border: $tangerine 4px solid;
-  background-color: transparent;
-  border-radius: 8px;
-  color: white;
-  padding: 5px;
-  font-size: 1.3rem;
-  font-family: 'Century Gothic';
-  font-weight: bold;
-  letter-spacing: 2px;
-  outline: none;
-  transition: all .4s;
-}
-
-.defaultLogin {
-  transition: all .4s;
-  height: auto;
-}
-.social-login {
-  transition: all .4s;
-  height: auto;
-}
-.hide {
-  overflow: hidden;
-  height: 0px;
-  transition: all .4s;
-}
-
-.show {
-  overflow: hidden;
-  transition: all .4s;
-  height: auto;
 }

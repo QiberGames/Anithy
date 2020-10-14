@@ -1,27 +1,71 @@
-<div class="page">  
-    <div class="content">
-        <div class="logo-card">
-            <img class="logo" src="../../assets/logo/Big-Logo.svg" alt="Anithy-logo" />
-        </div>
-        <div class="login-card">
-            <form>
-                <div class="input-form">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" required>
-                </div>
-                <div class="input-form">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" required>
-                </div>
-                <div class="links">
-                    <a href="#">Reset password</a>
-                    | 
-                    <a href="#">Sign up</a>
-                </div>
-                <div>
-                    <input type="submit" value="Sign in">
-                </div>
-            </form>
-        </div>
+<div class="container-fluid page vertical-center">
+
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-8 col-md-6 col-lg-4 col-xl-3">
+        <img class="logo" src="../../assets/logo/Big-Logo.svg" alt="Anithy-logo" />
+      </div>
     </div>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 col-sm-8 col-md-8 col-lg-6 col-xl-5 login-card">
+        <form>
+          <div class="defaultLogin {{loginType == 'social'?'hide':'show'}}">
+            <div class="input-form">
+              <input id="username" type="text" name="username" required>
+              <span class="input-background"></span>
+              <label for="username">Username</label>
+            </div>
+            <div class="input-form">
+              <input id="password" type="password" name="password" required>
+              <span class="input-background"></span>
+              <label for="password" class="">Password</label>
+            </div>
+            <div class="input-form">
+              <a href="#">Forgot your password?</a>
+            </div>
+            <div class="input-form loginBtnForm">
+              <button type="submit" class="loginBtn">Login</button>
+            </div>
+            <div class="login-lable input-form">
+              <span>OR</span>
+            </div>
+            <div class="input-form">
+              <a class="btn to-social-login"
+                (click)="loginType=='social'?loginType = 'default':loginType='social'">Continue with socials
+                <fa-icon [icon]="faArrowRight"></fa-icon>
+              </a>
+            </div>
+          </div>
+          <div class="social-login {{loginType == 'social'?'show':'hide'}}">
+            <div class="input-form">
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faTwitch" brand="twitch"></fa-icon> Twitch
+              </button>
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faGoogle" brand="google"></fa-icon> Google
+              </button>
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faFacebook" brand="facebook"></fa-icon> Facebook
+              </button>
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faMicrosoft" brand="microsoft"></fa-icon> Microsoft
+              </button>
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faApple" brand="apple"></fa-icon> Apple
+              </button>
+              <button class="btn btn-block btn-dark">
+                <fa-icon [icon]="faDiscord" brand="discord"></fa-icon> Discord
+              </button>
+            </div>
+            <div class="input-form">
+              <a class="btn to-social-login" (click)="loginType=='social'?loginType = 'default':loginType='social'">
+                <fa-icon [icon]="faArrowLeft"></fa-icon> Back
+              </a>
+            </div>
+          </div>
+          <div class="form-footer">Need an account? <a href="#">Register</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
