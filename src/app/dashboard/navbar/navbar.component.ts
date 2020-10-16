@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { faHome,faUsers } from '@fortawesome/free-solid-svg-icons';
 @Component({
-  selector: 'app-navbar',
+  selector: 'dashboard-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

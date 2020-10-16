@@ -1,8 +1,8 @@
-@import "../../ui/variables";
+@import "../../../ui/variables";
 
 // Sign-in style
 .page {
-  background: url("../../assets/wave.png") top -5vh left -5vw no-repeat, url("../../assets/wave-down.png") bottom -5vw right -5vw no-repeat;
+  background: url("../../../assets/wave.png") top -5vh left -5vw no-repeat, url("../../../assets/wave-down.png") bottom -5vw right -5vw no-repeat;
   background-size: 50vw;
   min-height: 100vh;
 }

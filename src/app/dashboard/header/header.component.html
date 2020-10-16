@@ -1,28 +1,27 @@
-<header class="header">
-  <ul class="header-nav">
-      <li key="SearchBar" class="header-item flex-grow">
-          <div class="search-wrap">
-              <div class="search">
-                  <input id="searchInput" class="form-control" type="text" placeholder="Search" required/>
-                  <button type="submit"><i class="fas fa-search"></i></button>
-              </div>
-          </div>
-      </li>
-      <li key="Profile" class="header-item">
-          <div class="logged-info" onMouseOver={this.onLoggedInfoEnter} onMouseOut={this.onLoggedInfoLeave}>
-              <a routerLink="/profile" class="user-avatar">
-                  <img src="/images/default-profile.jpg" width="50" height="50" />
-              </a>
-              <div class="profile-info">
-                  <div>Svetch <i class="fas fa-fw fa-angle-down"></i></div>
-                  <div><span>$10</span></div>
-              </div>
-              <div class="profile-dropdown">
-                  <ul class="dropdown">
+<!--   <ul class="header-nav">
+    <li key="SearchBar" class="header-item flex-grow">
+      <div class="search-wrap">
+        <div class="search">
+          <input id="searchInput" class="form-control" type="text" placeholder="Search" required />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </li>
+    <li key="Profile" class="header-item">
+      <div class="logged-info" onMouseOver={this.onLoggedInfoEnter} onMouseOut={this.onLoggedInfoLeave}>
+        <a routerLink="/profile" class="user-avatar">
+          <img [src]="(auth.user$ | async)?.photoURL" width="50" height="50" />
+        </a>
+        <div class="profile-info">
+          <div>Svetch <i class="fas fa-fw fa-angle-down"></i></div>
+          <div><span>$10</span></div>
+        </div>
+        <div class="profile-dropdown">
+          <ul class="dropdown">
 
-                  </ul>
-              </div>
-          </div>
-      </li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
-</header>
+ -->

@@ -1,3 +1,52 @@
-<app-header></app-header>
-<app-navbar></app-navbar>
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <a routerLink="/" class="nav-link" routerLinkActive="active">
+        <span class="link-text logo-text">Anithy</span>
+        <img src="../../../assets/logo/Big-Logo.svg" width="60" height="60" class="img" />
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/home" class="nav-link" routerLinkActive="active">
+        <fa-icon [icon]="faHome"></fa-icon>
+        <span class="link-text">Home</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/community" class="nav-link" routerLinkActive="active">
+        <fa-icon [icon]="faUsers"></fa-icon>
+        <span class="link-text">Community</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<header class="header">
+  <ul class="header-nav">
+      <li key="SearchBar" class="header-item flex-grow">
+          <div class="search-wrap">
+              <div class="search">
+                  <input id="searchInput" class="form-control" type="text" placeholder="Search" required/>
+                  <button type="submit"><i class="fas fa-search"></i></button>
+              </div>
+          </div>
+      </li>
+      <li key="Profile" class="header-item">
+          <div class="logged-info" onMouseOver={this.onLoggedInfoEnter} onMouseOut={this.onLoggedInfoLeave}>
+              <a routerLink="/profile" class="user-avatar">
+                  <img [src]="(auth.user$ | async)?.photoURL" width="50" height="50" />
+              </a>
+              <div class="profile-info">
+                  <div>Svetch <i class="fas fa-fw fa-angle-down"></i></div>
+                  <div><span>$10</span></div>
+              </div>
+              <div class="profile-dropdown">
+                  <ul class="dropdown">
+
+                  </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</header>
+<a class="btn" style="position: absolute; top: 5rem; left: 5rem;" (click)="auth.signOut()">logout</a>
 <router-outlet></router-outlet>

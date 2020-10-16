@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { faHome,faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  faHome = faHome;
+  faUsers = faUsers;
+  constructor(public auth: AuthService) { }
 
   ngOnInit(): void {
   }
